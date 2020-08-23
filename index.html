@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tebak angka</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var ulang=true;
+    while(ulang){
+       //membuat popup prompt
+       var tebak=prompt("Masukan angka 0-9: ")
+
+       //membuat bilangan random 0-9
+       var kompi=Math.random();
+       console.log(kompi);
+
+       if (kompi>=0 && kompi<=0.05) {
+       		kompi='0';
+       } else if (kompi>=0.06 && kompi<=0.15) {
+       		kompi='1';
+       } else if (kompi>=0.16 && kompi<=0.25) {
+       		kompi='2';
+       } else if (kompi >=0.26 && kompi<=0.35) {
+       		kompi='3';
+       } else if (kompi >=0.36 && kompi<=0.45) {
+       		kompi='4';
+       } else if (kompi >=0.46 && kompi<=0.55) {
+       		kompi='5';
+       } else if (kompi >=0.56 && kompi<=0.65) {
+       		kompi='6';
+       } else if (kompi >=0.66 && kompi<=0.75) {
+       		kompi='7';
+       } else if (kompi >=0.76 && kompi<=0.85) {
+       		kompi='8';
+       } else {
+       		kompi='9';
+       }
+
+       var hasil='';
+
+       //mengecek apakah bilangan random sama dengan yang diinputkan
+       if (tebak==kompi) {
+       		hasil='BENAR!';
+       } else {
+       		hasil='SALAH!';
+       }
+
+       //menampilkan alert
+      alert('Jawabannya '+kompi+', tebakan anda '+hasil);
+      ulang=confirm('Main lagi?');
+  	}
+  	alert('Terima kasih sudah bermain!');
+    </script>
+
+</body>
+</html>
